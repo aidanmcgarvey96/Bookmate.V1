@@ -1,0 +1,168 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f5f6fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.upload-section {
+    margin: 2rem 0;
+}
+
+.upload-box {
+    border: 2px dashed var(--primary-color);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    background-color: white;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#fileInput {
+    display: none;
+}
+
+.preview-hidden {
+    display: none;
+}
+
+#imagePreview {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#imagePreview img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 8px;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.spinner-inner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--secondary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+.filters-section {
+    margin-top: 2rem;
+}
+
+.filter-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filter-tag.active {
+    background-color: var(--primary-color);
+}
+
+.book-card {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.book-cover {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-title {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+.book-author {
+    color: #666;
+    margin: 0 0 0.5rem 0;
+}
+
+.book-rating {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.book-genres {
+    margin: 0.5rem 0;
+}
+
+.genre-tag {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.book-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 0 0;
+}
+
+#detectedBooks, #recommendations {
+    margin: 2rem 0;
+} 
